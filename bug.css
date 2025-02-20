@@ -1,0 +1,11 @@
+This error occurs when using Tailwind CSS with `@apply` directives within custom directives.  The issue arises when the `@apply` directive refers to a class that hasn't been defined or is misspelled, or when there's a conflict in class names.  This often leads to unexpected styles or no styles being applied at all. For example:
+
+```tailwindcss
+@layer components {
+  .custom-button {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+}
+```
+
+If `bg-blue-500` or another class within the `@apply` directive is incorrect, Tailwind will not generate the intended CSS, resulting in an unexpected or absent style.
