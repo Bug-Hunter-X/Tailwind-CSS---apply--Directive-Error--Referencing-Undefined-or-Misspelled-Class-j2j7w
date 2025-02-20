@@ -1,0 +1,11 @@
+The solution involves carefully checking the spelling of each class within the `@apply` directive and ensuring that they are all correctly defined in your `tailwind.config.js` file or are part of the Tailwind CSS classes.  If using custom classes, make sure those are correctly defined and accessible in your CSS.  Here's the corrected code:
+
+```tailwindcss
+@layer components {
+  .custom-button {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded; //Corrected spelling/usage
+  }
+}
+```
+
+This ensures that all classes used in `@apply` are valid and will be applied correctly by Tailwind CSS.  Consider using your IDE's auto-completion features to help prevent such errors.
